@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ title.field }}
+{% endblock %}
+
+{% block content %}
+<h1>Главная странца</h1>
+<ul>
+{% for user in users %}
+    <p><li>id: {{user.id}} email: {{user.email}}</li></p>
+
+    <ul>
+    <li>Имя: {{user.pr.name}}</li>
+    <li>Возраст: {{user.pr.age}}</li>
+    <li>Город {{user.pr.city}}</li>
+        <br>
+    </ul>
+{% endfor %}
+</ul>
+
+
+{% endblock %}

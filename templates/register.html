@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+
+{% block title %}
+{{ title.field }}
+{% endblock %}
+
+
+
+
+{% block content%}
+<h1>Регистрация на сайте</h1>
+<form action="/register" method="post">
+    <p><label>Имя:</label><br>
+        <input type = 'text' name = "name" value="" required />
+    <p><label>Возраст:</label>
+    <br><input type = 'text' name = "age" value="" required />
+    <p><label>Город:</label>
+    <br><input type = 'text' name = "city" value="" required />
+    <p><label>Email:</label><br><input type = 'text' name = "email" value="" required />
+    <p><label>Пароль:</label><br><input type = 'text' name = "psw" value="" required />
+    <p><label>Повторить пароль:</label><br><input type = 'text' name = "psw2" value="" required />
+<br>
+    <p><input type="submit" value="Зарегистрироваться">
+</form>
+{% endblock %}
